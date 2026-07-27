@@ -1,0 +1,33 @@
+import { forwardRef } from "react";
+import type { TextareaHTMLAttributes } from "react";
+
+export type TextareaFieldProps = TextareaHTMLAttributes<HTMLTextAreaElement> & {
+  label: string;
+  error?: string;
+};
+
+// Shared styled textarea for react-hook-form: spread `register("field")` onto it
+// directly (ref-forwarding makes this a drop-in replacement for `<textarea>`).
+export const TextareaField = forwardRef<HTMLTextAreaElement, TextareaFieldProps>(function TextareaField(
+  { label, error, required, id, className = "", ...props },
+  ref,
+) {
+  return (
+    <div>
+      <label htmlFor={id} className="mb-1.5 block text-sm font-medium text-gray-700">
+        {label} {required && <span className="text-red-500">*</span>}
+      </label>
+      <textarea
+        ref={ref}
+        id={id}
+        required={required}
+        aria-invalid={error ? "true" : "false"}
+        className={`block w-full rounded-lg border px-3.5 py-2.5 text-sm text-gray-900 placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500/40 ${
+          error ? "border-red-400" : "border-gray-300 focus:border-blue-500"
+        } ${className}`}
+        {...props}
+      />
+      {error && <p className="mt-1.5 text-sm text-red-600">{error}</p>}
+    </div>
+  );
+});

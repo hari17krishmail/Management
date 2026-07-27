@@ -1,0 +1,148 @@
+import type { CommissionStatus } from "../network-commission/network-commission-data";
+
+export type FileEarningRecord = {
+  id: string;
+  fileNumber: string;
+  name: string;
+  phoneNumber: string;
+  emailId: string;
+  commissionAmount: number;
+  fileStatus: CommissionStatus;
+  walletReceived: boolean;
+  collegeName: string;
+};
+
+export const FILE_EARNING_RECORDS: FileEarningRecord[] = [
+  {
+    id: "1",
+    fileNumber: "FE-00101",
+    name: "Priya Sharma",
+    phoneNumber: "9876543210",
+    emailId: "priya@email.com",
+    commissionAmount: 2500,
+    fileStatus: "Approved",
+    walletReceived: true,
+    collegeName: "Loyola College",
+  },
+  {
+    id: "2",
+    fileNumber: "FE-00102",
+    name: "Rahul Verma",
+    phoneNumber: "9845612370",
+    emailId: "rahul@email.com",
+    commissionAmount: 1800,
+    fileStatus: "Pending",
+    walletReceived: false,
+    collegeName: "Loyola College",
+  },
+  {
+    id: "3",
+    fileNumber: "FE-00103",
+    name: "Sneha Patel",
+    phoneNumber: "9712345678",
+    emailId: "sneha@email.com",
+    commissionAmount: 3200,
+    fileStatus: "Approved",
+    walletReceived: true,
+    collegeName: "Loyola College",
+  },
+  {
+    id: "4",
+    fileNumber: "FE-00104",
+    name: "Amit Kumar",
+    phoneNumber: "9654321890",
+    emailId: "amit@email.com",
+    commissionAmount: 900,
+    fileStatus: "Rejected",
+    walletReceived: false,
+    collegeName: "Loyola College",
+  },
+  {
+    id: "5",
+    fileNumber: "FE-00105",
+    name: "Divya Nair",
+    phoneNumber: "9123456780",
+    emailId: "divya@email.com",
+    commissionAmount: 4100,
+    fileStatus: "Approved",
+    walletReceived: true,
+    collegeName: "Loyola College",
+  },
+  {
+    id: "6",
+    fileNumber: "FE-00106",
+    name: "Karan Singh",
+    phoneNumber: "9900112233",
+    emailId: "karan@email.com",
+    commissionAmount: 1500,
+    fileStatus: "Pending",
+    walletReceived: false,
+    collegeName: "Loyola College",
+  },
+  {
+    id: "7",
+    fileNumber: "FE-00107",
+    name: "Meera Joshi",
+    phoneNumber: "9811223344",
+    emailId: "meera@email.com",
+    commissionAmount: 2750,
+    fileStatus: "Approved",
+    walletReceived: true,
+    collegeName: "Loyola College",
+  },
+  {
+    id: "8",
+    fileNumber: "FE-00108",
+    name: "Suresh Reddy",
+    phoneNumber: "9700998877",
+    emailId: "suresh@email.com",
+    commissionAmount: 600,
+    fileStatus: "Rejected",
+    walletReceived: false,
+    collegeName: "Loyola College",
+  },
+  {
+    id: "9",
+    fileNumber: "FE-00109",
+    name: "Anita Desai",
+    phoneNumber: "9988776655",
+    emailId: "anita@email.com",
+    commissionAmount: 3900,
+    fileStatus: "Pending",
+    walletReceived: false,
+    collegeName: "Loyola College",
+  },
+  {
+    id: "10",
+    fileNumber: "FE-00110",
+    name: "Vikram Iyer",
+    phoneNumber: "9876001122",
+    emailId: "vikram@email.com",
+    commissionAmount: 2200,
+    fileStatus: "Approved",
+    walletReceived: true,
+    collegeName: "Loyola College",
+  },
+  {
+    id: "11",
+    fileNumber: "FE-00111",
+    name: "Neha Kapoor",
+    phoneNumber: "9812345098",
+    emailId: "neha@email.com",
+    commissionAmount: 1200,
+    fileStatus: "Pending",
+    walletReceived: false,
+    collegeName: "Loyola College",
+  },
+  {
+    id: "12",
+    fileNumber: "FE-00112",
+    name: "Arjun Rao",
+    phoneNumber: "9765432109",
+    emailId: "arjun@email.com",
+    commissionAmount: 3500,
+    fileStatus: "Approved",
+    walletReceived: true,
+    collegeName: "Loyola College",
+  },
+];
